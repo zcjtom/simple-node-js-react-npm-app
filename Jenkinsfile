@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                sh 'npm install --registry http://10.10.2.122:8181/repository/oss-npm-group/' 
             }
         }
         stage('Test') {
