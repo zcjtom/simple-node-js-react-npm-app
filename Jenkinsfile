@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install --registry http://10.10.2.122:8181/repository/oss-npm-group/' 
+                sh 'npm config set proxy=http://10.10.1.111:808'
+                sh 'npm install'
             }
         }
         stage('Test') {
